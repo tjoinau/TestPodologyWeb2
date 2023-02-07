@@ -1,0 +1,31 @@
+<div class="container text-center">
+    <mat-card class="mt-5 p-3">
+        <mat-card-content>
+            <div class="row">
+                <h1>Welcome to Medlogics</h1>
+                <h4 class="mt-3">Need an account? <a href="*">Click here</a></h4>
+            </div>
+            <div class="row mt-5">
+                <div class="offset-4 col-4 d-flex justify-content-around">
+                    <div>
+                        <button mat-raised-button color="accent" type="button" (click)="hcpSet();">Doctor</button>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="warn" type="button" (click)="patientSet();">Patient</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <dx-select-box class="offset-4 col-4" [items]="UsersItems" displayExpr="username" placeholder="Select a user"
+                    label="User" stylingMode="underlined" labelMode="floating" [value]="UsersItem" (onValueChanged)="UsersItem = $event.value" height="60px">
+                </dx-select-box>
+            </div>
+
+            <div class="row mt-3">
+                <div class="d-flex justify-content-around">
+                    <button [disabled]="!UsersItem" class="col-3" mat-raised-button color="basic" type="button" (click)="login();">Login</button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
