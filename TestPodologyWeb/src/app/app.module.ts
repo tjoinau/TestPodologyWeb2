@@ -16,7 +16,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {ScrollingModule} from '@angular/cdk/scrolling'; 
 
 // DevExtreme
-import { DxSelectBoxModule, DxTreeViewModule } from 'devextreme-angular';
+import { DxSelectBoxModule, DxTreeViewModule, DxScrollViewModule } from 'devextreme-angular';
 
 import { ApiModule } from './api/api.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -49,7 +49,8 @@ import { HcpDashboardComponent } from './components/healthCheckProvider/hcp-dash
     ScrollingModule,
     MatSidenavModule,
     DxSelectBoxModule,
-    DxTreeViewModule
+    DxTreeViewModule,
+    DxScrollViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -34,6 +34,29 @@ export class HcpMainComponent implements OnInit {
     this.router.navigate(["login"]);
   }
 
+
+
+
+  changeSelection(menuItem: NavItem) {
+    console.log(menuItem)
+    if (menuItem?.items == null || menuItem?.items.length == 0) {
+      this.router.navigate([menuItem.path]);
+    }
+    else {
+      let item = this.navItems.find(m => m.title == menuItem.title);
+      if (item)
+        item.isExpanded = !item.isExpanded;
+    }
+  }
+
+
+
+
+
+
+
+
+
   open(key: any) {
     if (key.itemData.isExpanded == true) {
       this.collapseNode(key);
