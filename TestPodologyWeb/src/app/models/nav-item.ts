@@ -8,5 +8,6 @@ export interface NavItem {
     badge: string;
     badgeClass: string;
     role: string[];
-    submenu: NavItem[];
+    isExpanded: boolean;
+    items: NavItem[];
 }

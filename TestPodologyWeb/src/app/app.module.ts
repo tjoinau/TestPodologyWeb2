@@ -13,9 +13,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card'; 
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {ScrollingModule} from '@angular/cdk/scrolling'; 
 
 // DevExtreme
-import { DxSelectBoxModule } from 'devextreme-angular';
+import { DxSelectBoxModule, DxTreeViewModule } from 'devextreme-angular';
 
 import { ApiModule } from './api/api.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -45,8 +46,10 @@ import { HcpDashboardComponent } from './components/healthCheckProvider/hcp-dash
     MatButtonModule,
     MatCardModule,
     MatIconModule,
+    ScrollingModule,
     MatSidenavModule,
-    DxSelectBoxModule
+    DxSelectBoxModule,
+    DxTreeViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,13 +13,14 @@ export const navItems: NavItem[] =
           badge: "",
           badgeClass: "",
           role: ["All"],
-          submenu: [],
+          isExpanded: false,
+          items: [],
         },
       
         // Doctor Modules
         {
           path: "/doctor/dashboard",
-          title: "MENUITEMS.DASHBOARD.LIST.DOCTOR-DASHBOARD",
+          title: "Dashboard",
           iconType: "material-icons-two-tone",
           icon: "space_dashboard",
           class: "",
@@ -27,7 +28,58 @@ export const navItems: NavItem[] =
           badge: "",
           badgeClass: "",
           role: [Role.hcp],
-          submenu: [],
+          isExpanded: false,
+          items: [{
+            path: "/authentication/signin",
+            title: "Sign In",
+            iconType: "",
+            icon: "",
+            class: "ml-menu",
+            groupTitle: false,
+            badge: "",
+            badgeClass: "",
+            role: [""],
+            isExpanded: false,
+            items: [],
+          },
+          {
+            path: "/authentication/signup",
+            title: "Sign Up",
+            iconType: "",
+            icon: "",
+            class: "ml-menu",
+            groupTitle: false,
+            badge: "",
+            badgeClass: "",
+            role: [""],
+            isExpanded: false,
+            items: [{
+              path: "/authentication/forgot-password",
+              title: "Forgot Password",
+              iconType: "",
+              icon: "",
+              class: "ml-menu",
+              groupTitle: false,
+              badge: "",
+              badgeClass: "",
+              role: [""],
+              isExpanded: false,
+              items: [],
+            },
+            {
+              path: "/authentication/locked",
+              title: "Locked",
+              iconType: "",
+              icon: "",
+              class: "ml-menu",
+              groupTitle: false,
+              badge: "",
+              badgeClass: "",
+              role: [""],
+              isExpanded: false,
+              items: [],
+            }],
+          }],
         },
       
         // Patient Modules
@@ -41,7 +93,8 @@ export const navItems: NavItem[] =
           badge: "",
           badgeClass: "",
           role: ["Patient"],
-          submenu: [],
+          isExpanded: false,
+          items: [],
         },
         // Common Modules
       
@@ -55,7 +108,8 @@ export const navItems: NavItem[] =
           badge: "",
           badgeClass: "",
           role: ["Admin"],
-          submenu: [
+          isExpanded: false,
+          items: [
             {
               path: "/authentication/signin",
               title: "Sign In",
@@ -66,7 +120,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
             {
               path: "/authentication/signup",
@@ -78,7 +133,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
             {
               path: "/authentication/forgot-password",
@@ -90,7 +146,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
             {
               path: "/authentication/locked",
@@ -102,7 +159,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
             {
               path: "/authentication/page404",
@@ -114,7 +172,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
             {
               path: "/authentication/page500",
@@ -126,7 +185,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
           ],
         },
@@ -140,7 +200,8 @@ export const navItems: NavItem[] =
           badge: "",
           badgeClass: "",
           role: ["Admin"],
-          submenu: [
+          isExpanded: false,
+          items: [
             {
               path: "/extra-pages/blank",
               title: "Blank Page",
@@ -151,7 +212,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
           ],
         },
@@ -165,7 +227,8 @@ export const navItems: NavItem[] =
           badge: "",
           badgeClass: "",
           role: ["Admin"],
-          submenu: [
+          isExpanded: false,
+          items: [
             {
               path: "/multilevel/first1",
               title: "First",
@@ -176,7 +239,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
             {
               path: "/",
@@ -188,7 +252,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [
+              isExpanded: false,
+              items: [
                 {
                   path: "/multilevel/secondlevel/second1",
                   title: "Second 1",
@@ -199,7 +264,8 @@ export const navItems: NavItem[] =
                   badge: "",
                   badgeClass: "",
                   role: [""],
-                  submenu: [],
+                  isExpanded: false,
+                  items: [],
                 },
                 {
                   path: "/",
@@ -211,7 +277,8 @@ export const navItems: NavItem[] =
                   badge: "",
                   badgeClass: "",
                   role: [""],
-                  submenu: [
+                  isExpanded: false,
+                  items: [
                     {
                       path: "/multilevel/thirdlevel/third1",
                       title: "third 1",
@@ -222,7 +289,8 @@ export const navItems: NavItem[] =
                       badge: "",
                       badgeClass: "",
                       role: [""],
-                      submenu: [],
+                      isExpanded: false,
+                      items: [],
                     },
                   ],
                 },
@@ -238,7 +306,8 @@ export const navItems: NavItem[] =
               badge: "",
               badgeClass: "",
               role: [""],
-              submenu: [],
+              isExpanded: false,
+              items: [],
             },
           ],
         },
