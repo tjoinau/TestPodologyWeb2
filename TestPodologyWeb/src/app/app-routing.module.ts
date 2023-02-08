@@ -10,12 +10,12 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   {
-    path: 'patient-mainPage', component: PatientMainComponent, children: [
+    path: 'patient', component: PatientMainComponent, children: [
       { path: 'patient-dashboard', component: PatientDashboardComponent }
     ]
   },
   {
-    path: 'hcp-mainPage', component: HcpMainComponent, children: [
+    path: 'healthCheckProvider', component: HcpMainComponent, children: [
       { path: 'hcp-dashboard', component: HcpDashboardComponent }
     ]
   },
