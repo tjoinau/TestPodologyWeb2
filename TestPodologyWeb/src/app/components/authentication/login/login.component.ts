@@ -55,13 +55,13 @@ export class LoginComponent implements OnInit {
   }
 
   hcpSet(){
-    this.UsersItem = undefined;
     this.UsersItems = this.hcpUsers
+    this.UsersItem = this.UsersItems[0];
   }
 
   patientSet(){
-    this.UsersItem = undefined;
     this.UsersItems = this.patientUsers
+    this.UsersItem = this.UsersItems[0]
   }
 
   test(a: any){

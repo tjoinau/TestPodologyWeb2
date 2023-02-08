@@ -17,7 +17,7 @@
             </div>
 
             <div class="row mt-5">
-                <dx-select-box class="offset-4 col-4" [items]="UsersItems" displayExpr="username" placeholder="Select a user"
+                <dx-select-box class="offset-4 col-4" [items]="UsersItems" displayExpr="username" placeholder="Select a user" [value]="UsersItems[0]"
                     label="User" stylingMode="underlined" labelMode="floating" [value]="UsersItem" (onValueChanged)="UsersItem = $event.value" height="60px">
                 </dx-select-box>
             </div>
