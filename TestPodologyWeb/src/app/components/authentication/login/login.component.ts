@@ -64,10 +64,6 @@ export class LoginComponent implements OnInit {
     this.UsersItem = this.UsersItems[0]
   }
 
-  test(a: any){
-    console.log(a)
-  }
-
   login(){
     localStorage.setItem('currentUser', JSON.stringify(this.UsersItem));
     

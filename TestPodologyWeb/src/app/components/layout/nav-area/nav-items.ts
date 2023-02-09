@@ -6,6 +6,7 @@ export const navItems: NavItem[] =
         // Doctor Modules
         {
           path: "healthCheckProvider/dashboard",
+          routerLink: "dashboard",
           title: "Dashboard",
           icon: "bi bi-columns",
           class: "",
@@ -13,6 +14,7 @@ export const navItems: NavItem[] =
           isExpanded: false,
           items: [{
             path: "healthCheckProvider/dashboard",
+            routerLink: "/dashboard",
             title: "Dashboard",
             icon: "bi bi-speedometer",
             class: "",
@@ -23,6 +25,7 @@ export const navItems: NavItem[] =
         },
         {
           path: "healthCheckProvider/consultation",
+          routerLink: "consultation",
           title: "Consultations",
           icon: "bi bi-file-earmark-text",
           class: "ml-menu",
@@ -32,6 +35,7 @@ export const navItems: NavItem[] =
         },
         {
           path: "healthCheckProvider/patients",
+          routerLink: "patients",
           title: "Patients",
           icon: "bi bi-people",
           class: "ml-menu",
@@ -41,6 +45,7 @@ export const navItems: NavItem[] =
         },
         {
           path: "healthCheckProvider/calendar",
+          routerLink: "calendar",
           title: "Calendar",
           icon: "bi bi-calendar-date",
           class: "ml-menu",
@@ -52,6 +57,7 @@ export const navItems: NavItem[] =
         // Patient Modules
         {
           path: "patient/dashboard",
+          routerLink: "dashboard",
           title: "Dashboard",
           icon: "space_dashboard",
           class: "",
@@ -61,6 +67,7 @@ export const navItems: NavItem[] =
         },
         {
           path: "patient/consultations",
+          routerLink: "consultations",
           title: "Consultations",
           icon: "supervised_user_circle",
           class: "menu-toggle",

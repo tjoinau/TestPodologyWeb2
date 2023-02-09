@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/authentication/login/login.component';
+import { HcpCalendarComponent } from './components/healthCheckProvider/hcp-calendar/hcp-calendar.component';
 import { HcpDashboardComponent } from './components/healthCheckProvider/hcp-dashboard/hcp-dashboard.component';
 import { HcpMainComponent } from './components/healthCheckProvider/hcp-main/hcp-main.component';
 import { HcpPatientsComponent } from './components/healthCheckProvider/hcp-patients/hcp-patients.component';
@@ -18,7 +19,8 @@ const routes: Routes = [
   {
     path: 'healthCheckProvider', component: HcpMainComponent, children: [
       { path: 'dashboard', component: HcpDashboardComponent },
-      { path: 'patients', component: HcpPatientsComponent }
+      { path: 'patients', component: HcpPatientsComponent },
+      { path: 'calendar', component: HcpCalendarComponent }
     ]
   },
 

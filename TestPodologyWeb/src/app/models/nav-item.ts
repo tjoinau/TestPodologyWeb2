@@ -6,4 +6,5 @@ export interface NavItem {
     role: string[];
     isExpanded: boolean;
     items: NavItem[];
+    routerLink: string;
 }

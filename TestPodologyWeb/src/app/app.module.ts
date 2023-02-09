@@ -28,6 +28,7 @@ import { HcpDashboardComponent } from './components/healthCheckProvider/hcp-dash
 import { NavAreaComponent } from './components/layout/nav-area/nav-area.component';
 import { CustomCardComponent } from './components/layout/custom-card/custom-card.component';
 import { HcpPatientsComponent } from './components/healthCheckProvider/hcp-patients/hcp-patients.component';
+import { HcpCalendarComponent } from './components/healthCheckProvider/hcp-calendar/hcp-calendar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HcpPatientsComponent } from './components/healthCheckProvider/hcp-patie
     HcpDashboardComponent,
     NavAreaComponent,
     CustomCardComponent,
-    HcpPatientsComponent
+    HcpPatientsComponent,
+    HcpCalendarComponent
   ],
   imports: [
     HttpClientModule,

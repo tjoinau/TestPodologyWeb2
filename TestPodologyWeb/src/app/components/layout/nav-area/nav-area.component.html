@@ -7,11 +7,6 @@
     <div class="h-100 w-100">
       <div class="drawer h-100 w-100">
         <dx-scroll-view>
-          <div>
-            <div class="logo">
-              <!-- <img class="logo" height="65" width="65" src="../assets/img/logo.png" /> -->
-            </div>
-          </div>
           <div class="menu d-flex flex-column w-100">
             <div *ngFor="let item of navItems" class="w-100">
               <div class="menu-item d-flex align-items-center w-100 rounded-4" (click)="changeSelection(item)">
@@ -32,7 +27,7 @@
                 </div>
               </div>
               <div [ngClass]="item.isExpanded ? 'show' : 'hide'">
-                <div *ngFor="let subItem of item.items" (click)="changeSelection(subItem)">
+                <div *ngFor="let subItem of item.items" (click)="changeSelection(subItem)" routerLink="{{item.routerLink}}" routerLinkActive="text-danger">
                   <div>
                     <div class="menu-item d-flex align-items-center w-100">
                       <div class="icon-light ms-4">
