@@ -72,10 +72,10 @@ export class LoginComponent implements OnInit {
     localStorage.setItem('currentUser', JSON.stringify(this.UsersItem));
     
     if(this.UsersItem?.role == Role.hcp){
-      this.router.navigate(["healthCheckProvider/hcp-dashboard"]);
+      this.router.navigate(["healthCheckProvider/dashboard"]);
     }
     else{
-      this.router.navigate(["/patient/patient-dashboard"]);
+      this.router.navigate(["/patient/dashboard"]);
     }
 
   }

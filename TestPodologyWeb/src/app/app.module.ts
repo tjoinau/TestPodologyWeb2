@@ -14,6 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import {ScrollingModule} from '@angular/cdk/scrolling'; 
+import {MatDividerModule} from '@angular/material/divider'; 
 
 // DevExtreme
 import { DxSelectBoxModule, DxTreeViewModule, DxScrollViewModule } from 'devextreme-angular';
@@ -24,6 +25,9 @@ import { HcpMainComponent } from './components/healthCheckProvider/hcp-main/hcp-
 import { PatientMainComponent } from './components/patient/patient-main/patient-main.component';
 import { PatientDashboardComponent } from './components/patient/patient-dashboard/patient-dashboard.component';
 import { HcpDashboardComponent } from './components/healthCheckProvider/hcp-dashboard/hcp-dashboard.component';
+import { NavAreaComponent } from './components/layout/nav-area/nav-area.component';
+import { CustomCardComponent } from './components/layout/custom-card/custom-card.component';
+import { HcpPatientsComponent } from './components/healthCheckProvider/hcp-patients/hcp-patients.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,10 @@ import { HcpDashboardComponent } from './components/healthCheckProvider/hcp-dash
     HcpMainComponent,
     PatientMainComponent,
     PatientDashboardComponent,
-    HcpDashboardComponent
+    HcpDashboardComponent,
+    NavAreaComponent,
+    CustomCardComponent,
+    HcpPatientsComponent
   ],
   imports: [
     HttpClientModule,
@@ -48,6 +55,7 @@ import { HcpDashboardComponent } from './components/healthCheckProvider/hcp-dash
     MatIconModule,
     ScrollingModule,
     MatSidenavModule,
+    MatDividerModule,
     DxSelectBoxModule,
     DxTreeViewModule,
     DxScrollViewModule

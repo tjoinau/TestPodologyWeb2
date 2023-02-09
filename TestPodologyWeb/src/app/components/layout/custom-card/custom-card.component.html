@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+      <mat-card-subtitle *ngIf="subtitle.length > 0">{{subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-divider class="mt-3"></mat-divider>
+
+    <mat-card-content class="mt-5">
+        <ng-content> </ng-content>
+    </mat-card-content>
+  </mat-card>
