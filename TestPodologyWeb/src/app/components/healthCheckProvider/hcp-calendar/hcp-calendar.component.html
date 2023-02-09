@@ -1,3 +1,17 @@
 <app-custom-card title="Calendar" subtitle="Your calendar is there">
-    <span>blablabla</span>
+    <dx-scheduler
+  [dataSource]="Datas"
+  [views]="['day', 'week', 'workWeek', 'month']"
+  currentView="month"
+  [currentDate]="currentDate"
+  firstDayOfWeek="1"
+  [startDayHour]="7"
+  [height]="600"
+>
+<dxi-resource
+    [dataSource]="locations"
+    fieldExpr="locationId"
+    [useColorAsDefault]="true"
+  ></dxi-resource>
+</dx-scheduler>
 </app-custom-card>

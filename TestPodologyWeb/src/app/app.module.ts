@@ -1,12 +1,3 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LoginComponent } from './components/authentication/login/login.component';
-import { LogoutComponent } from './components/authentication/logout/logout.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 // Material
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatButtonModule} from '@angular/material/button'; 
@@ -17,10 +8,16 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import {MatDividerModule} from '@angular/material/divider'; 
 
 // DevExtreme
-import { DxSelectBoxModule, DxTreeViewModule, DxScrollViewModule } from 'devextreme-angular';
+import { DxSelectBoxModule, DxTreeViewModule, DxScrollViewModule, DxSchedulerModule } from 'devextreme-angular';
 
+// Modules
 import { ApiModule } from './api/api.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Components
 import { HcpMainComponent } from './components/healthCheckProvider/hcp-main/hcp-main.component';
 import { PatientMainComponent } from './components/patient/patient-main/patient-main.component';
 import { PatientDashboardComponent } from './components/patient/patient-dashboard/patient-dashboard.component';
@@ -29,6 +26,9 @@ import { NavAreaComponent } from './components/layout/nav-area/nav-area.componen
 import { CustomCardComponent } from './components/layout/custom-card/custom-card.component';
 import { HcpPatientsComponent } from './components/healthCheckProvider/hcp-patients/hcp-patients.component';
 import { HcpCalendarComponent } from './components/healthCheckProvider/hcp-calendar/hcp-calendar.component';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './components/authentication/login/login.component';
+import { LogoutComponent } from './components/authentication/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +60,8 @@ import { HcpCalendarComponent } from './components/healthCheckProvider/hcp-calen
     MatDividerModule,
     DxSelectBoxModule,
     DxTreeViewModule,
-    DxScrollViewModule
+    DxScrollViewModule,
+    DxSchedulerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

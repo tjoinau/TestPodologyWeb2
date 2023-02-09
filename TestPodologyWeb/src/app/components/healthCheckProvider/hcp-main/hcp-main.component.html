@@ -4,7 +4,7 @@
     <app-nav-area [currentUser]="currentUser"></app-nav-area>
   </mat-drawer>
   <!-- CONTENT AREA -->
-  <div class="example-sidenav-content" style="background-color: #e4e4e4;">
+  <div class="example-sidenav-content" >
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg" style="background-color: rgba(217, 164, 164, 0.918);">
       <div class="container-fluid">
@@ -51,8 +51,8 @@
       </div>
     </nav>
     <!-- CONTENT -->
-    <div class=" p-5">
-      <router-outlet></router-outlet>
+    <div class=" p-5" style="background-color: #e4e4e4;">
+        <router-outlet></router-outlet>
     </div>
   </div>
 </mat-drawer-container>
