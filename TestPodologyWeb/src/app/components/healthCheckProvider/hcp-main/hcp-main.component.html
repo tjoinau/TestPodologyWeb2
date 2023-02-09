@@ -4,7 +4,7 @@
     <app-nav-area [currentUser]="currentUser"></app-nav-area>
   </mat-drawer>
   <!-- CONTENT AREA -->
-  <div class="example-sidenav-content" >
+  <div class="example-sidenav-content globalBgColor" >
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg" style="background-color: rgba(217, 164, 164, 0.918);">
       <div class="container-fluid">
@@ -43,7 +43,7 @@
               <a class="nav-link text-light">Disabled</a>
             </li> -->
           </ul>
-          <span class="navbar-text text-light me-5">{{currentUser?.username}}</span>
+          <span class="navbar-text text-light me-5 fs-3" style="font-family: cursive;">{{currentUser?.username}}</span>
           <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon" (click)="logout()">
             <mat-icon>logout</mat-icon>
           </button>
@@ -51,7 +51,7 @@
       </div>
     </nav>
     <!-- CONTENT -->
-    <div class=" p-5" style="background-color: #e4e4e4;">
+    <div class=" p-5 globalBgColor" >
         <router-outlet></router-outlet>
     </div>
   </div>

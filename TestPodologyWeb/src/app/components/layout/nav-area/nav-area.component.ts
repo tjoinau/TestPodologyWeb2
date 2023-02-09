@@ -10,17 +10,20 @@ import { navItems } from './nav-items';
   styleUrls: ['./nav-area.component.scss']
 })
 export class NavAreaComponent implements OnInit{
-  constructor(private router: Router) { }
-  
   @Input() currentUser: User | undefined
 
+  constructor(private router: Router) { }
+  
+  public selectedMenu?: string;
   public navItems: NavItem[] = [];
   ngOnInit(): void {
-    
+    let urlParts = this.router.url.split('/');
+    this.selectedMenu = urlParts[urlParts.length - 1];
     this.navItems = navItems.filter((x) => x.role.indexOf(this.currentUser?.role as string) !== -1)
   }
 
   changeSelection(menuItem: NavItem) {
+    this.selectedMenu = menuItem.routerLink;
     if (menuItem?.items == null || menuItem?.items.length == 0) {
       this.router.navigate(['/'+menuItem.path]);
     }

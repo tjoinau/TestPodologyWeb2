@@ -5,8 +5,8 @@ export const navItems: NavItem[] =
     [      
         // Doctor Modules
         {
-          path: "healthCheckProvider/dashboard",
-          routerLink: "dashboard",
+          path: "",
+          routerLink: "",
           title: "Dashboard",
           icon: "bi bi-columns",
           class: "",
@@ -24,7 +24,7 @@ export const navItems: NavItem[] =
           }],
         },
         {
-          path: "healthCheckProvider/consultation",
+          path: "healthCheckProvider/consultations",
           routerLink: "consultation",
           title: "Consultations",
           icon: "bi bi-file-earmark-text",

@@ -18,8 +18,6 @@ export class HcpMainComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
-
-    console.log(this.navItems)
   }
 
   logout() {

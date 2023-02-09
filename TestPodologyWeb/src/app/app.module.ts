@@ -29,6 +29,7 @@ import { HcpCalendarComponent } from './components/healthCheckProvider/hcp-calen
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { LogoutComponent } from './components/authentication/logout/logout.component';
+import { HcpConsultationsComponent } from './components/healthCheckProvider/hcp-consultations/hcp-consultations.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { LogoutComponent } from './components/authentication/logout/logout.compo
     NavAreaComponent,
     CustomCardComponent,
     HcpPatientsComponent,
-    HcpCalendarComponent
+    HcpCalendarComponent,
+    HcpConsultationsComponent
   ],
   imports: [
     HttpClientModule,
