@@ -23,9 +23,9 @@ export class NavAreaComponent implements OnInit{
   }
 
   changeSelection(menuItem: NavItem) {
-    this.selectedMenu = menuItem.routerLink;
     if (menuItem?.items == null || menuItem?.items.length == 0) {
       this.router.navigate(['/'+menuItem.path]);
+      this.selectedMenu = menuItem.routerLink;
     }
     else {
       let item = this.navItems.find(m => m.title == menuItem.title);
