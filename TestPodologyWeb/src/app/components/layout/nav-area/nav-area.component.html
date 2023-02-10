@@ -28,8 +28,7 @@
                             </div> -->
                         </div>
                         <div [ngClass]="item.isExpanded ? 'show' : 'hide'">
-                            <div *ngFor="let subItem of item.items" (click)="changeSelection(subItem)"
-                                routerLink="{{subItem.routerLink}}" routerLinkActive="text-danger">
+                            <div *ngFor="let subItem of item.items" (click)="changeSelection(subItem)">
                                 <div [ngClass]="subItem?.routerLink == selectedMenu ? 'text-danger' : ''">
                                     <div class="menu-item d-flex align-items-center w-100">
                                         <div class="icon-light ms-4">

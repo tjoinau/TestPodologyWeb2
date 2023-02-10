@@ -30,6 +30,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import { LogoutComponent } from './components/authentication/logout/logout.component';
 import { HcpConsultationsComponent } from './components/healthCheckProvider/hcp-consultations/hcp-consultations.component';
+import { LayoutModule } from './components/layout/layout.module';
+import { PatientConsultationsComponent } from './components/patient/consultations/patient-consultations/patient-consultations.component';
+import { PatientEditConsultationComponent } from './components/patient/consultations/patient-edit-consultation/patient-edit-consultation.component';
 
 @NgModule({
   declarations: [
@@ -39,9 +42,9 @@ import { HcpConsultationsComponent } from './components/healthCheckProvider/hcp-
     HcpMainComponent,
     PatientMainComponent,
     PatientDashboardComponent,
+    PatientConsultationsComponent,
+    PatientEditConsultationComponent,
     HcpDashboardComponent,
-    NavAreaComponent,
-    CustomCardComponent,
     HcpPatientsComponent,
     HcpCalendarComponent,
     HcpConsultationsComponent,
@@ -59,11 +62,11 @@ import { HcpConsultationsComponent } from './components/healthCheckProvider/hcp-
     MatIconModule,
     ScrollingModule,
     MatSidenavModule,
-    MatDividerModule,
     DxSelectBoxModule,
     DxTreeViewModule,
     DxScrollViewModule,
-    DxSchedulerModule
+    DxSchedulerModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
