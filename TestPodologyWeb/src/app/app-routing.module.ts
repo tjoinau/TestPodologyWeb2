@@ -6,15 +6,19 @@ import { HcpConsultationsComponent } from './components/healthCheckProvider/hcp-
 import { HcpDashboardComponent } from './components/healthCheckProvider/hcp-dashboard/hcp-dashboard.component';
 import { HcpMainComponent } from './components/healthCheckProvider/hcp-main/hcp-main.component';
 import { HcpPatientsComponent } from './components/healthCheckProvider/hcp-patients/hcp-patients.component';
+import { PatientConsultationsComponent } from './components/patient/consultations/patient-consultations/patient-consultations.component';
+import { PatientEditConsultationComponent } from './components/patient/consultations/patient-edit-consultation/patient-edit-consultation.component';
 import { PatientDashboardComponent } from './components/patient/patient-dashboard/patient-dashboard.component';
 import { PatientMainComponent } from './components/patient/patient-main/patient-main.component';
 
 const routes: Routes = [
-  // { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   {
     path: 'patient', component: PatientMainComponent, children: [
-      { path: 'dashboard', component: PatientDashboardComponent }
+      { path: 'dashboard', component: PatientDashboardComponent },
+      { path: 'consultations', component: PatientConsultationsComponent },
+      { path: 'editconsultations', component: PatientEditConsultationComponent }
     ]
   },
   {

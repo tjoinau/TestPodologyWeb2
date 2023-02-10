@@ -44,7 +44,7 @@ import { HcpConsultationsComponent } from './components/healthCheckProvider/hcp-
     CustomCardComponent,
     HcpPatientsComponent,
     HcpCalendarComponent,
-    HcpConsultationsComponent
+    HcpConsultationsComponent,
   ],
   imports: [
     HttpClientModule,

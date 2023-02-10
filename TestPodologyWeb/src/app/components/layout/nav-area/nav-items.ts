@@ -74,5 +74,15 @@ export const navItems: NavItem[] =
           role: [Role.patient],
           isExpanded: false,
           items: [],
+        },
+        {
+          path: "patient/editconsultations",
+          routerLink: "editconsultations",
+          title: "editconsultations",
+          icon: "supervised_user_circle",
+          class: "menu-toggle",
+          role: [Role.patient],
+          isExpanded: false,
+          items: [],
         }
       ];
