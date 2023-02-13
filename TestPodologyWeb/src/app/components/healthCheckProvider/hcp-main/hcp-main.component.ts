@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Role } from 'src/app/models/role';
+import { NavItem } from 'src/app/models/nav-item';
 import { User } from 'src/app/models/user';
-import { navItems } from './nav-items';
 
 @Component({
   selector: 'app-hcp-main',
@@ -10,23 +9,51 @@ import { navItems } from './nav-items';
   styleUrls: ['./hcp-main.component.scss']
 })
 export class HcpMainComponent implements OnInit {
-  constructor( private router: Router){}
+
+  constructor(private router: Router) { }
 
   public currentUser: User | undefined;
   showFiller = false;
-  public navItems: any[] = [];
+  public navItems: NavItem[] = [];
 
   ngOnInit(): void {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
-
-    this.navItems = navItems.filter((x) => x.role.indexOf(this.currentUser?.role as string) !== -1)
-
-    console.log(this.navItems)
   }
 
-  logout(){
+  logout() {
     localStorage.removeItem('currentUser');
     this.router.navigate(["login"]);
   }
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  // open(key: any) {
+  //   if (key.itemData.isExpanded == true) {
+  //     this.collapseNode(key);
+  //   }
+  //   else {
+  //     this.expandNode(key)
+  //   }
+  // }
+
+  // private expandNode(key: any) {
+  //   console.log(key)
+  //   this.treeView?.instance.expandItem(key.node.key);
+  // }
+  // private collapseNode(key: any) {
+  //   console.log(key)
+  //   this.treeView?.instance.collapseItem(key.node.key);
+  // }
 
 }

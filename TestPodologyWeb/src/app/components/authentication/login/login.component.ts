@@ -64,18 +64,14 @@ export class LoginComponent implements OnInit {
     this.UsersItem = this.UsersItems[0]
   }
 
-  test(a: any){
-    console.log(a)
-  }
-
   login(){
     localStorage.setItem('currentUser', JSON.stringify(this.UsersItem));
     
     if(this.UsersItem?.role == Role.hcp){
-      this.router.navigate(["hcp-mainPage/hcp-dashboard"]);
+      this.router.navigate(["healthCheckProvider/dashboard"]);
     }
     else{
-      this.router.navigate(["/patient-mainPage/patient-dashboard"]);
+      this.router.navigate(["/patient/dashboard"]);
     }
 
   }

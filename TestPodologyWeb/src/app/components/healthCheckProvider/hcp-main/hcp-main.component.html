@@ -1,76 +1,58 @@
-<nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(217, 164, 164, 0.918);">
-    <div class="container-fluid">
-        <a class="navbar-brand text-light" href="#">Medlogics</a>
+<mat-drawer-container class="example-container" autosize>
+  <!-- NAVIGATION AREA -->
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened="true">
+    <app-nav-area [currentUser]="currentUser"></app-nav-area>
+  </mat-drawer>
+  <!-- CONTENT AREA -->
+  <div class="example-sidenav-content globalBgColor" >
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg" style="background-color: rgba(217, 164, 164, 0.918);">
+      <div class="container-fluid">
+        <button mat-icon-button aria-label="Example icon button with a home icon" (click)="drawer.toggle()">
+          <i *ngIf="drawer.opened" class="bi bi-box-arrow-in-left"></i>
+          <i *ngIf="!drawer.opened" class="bi bi-box-arrow-in-right"></i>
+
+        </button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light">Disabled</a>
-                </li>
-            </ul>
-            <span class="navbar-text text-light me-5">{{currentUser?.username}}</span>
-            <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon" (click)="logout()">
-                <mat-icon>logout</mat-icon>
-            </button>
-            <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon"
-                (click)="drawer.toggle()">
-                <mat-icon>menu_open</mat-icon>
-            </button>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light">Disabled</a>
+            </li> -->
+          </ul>
+          <span class="navbar-text text-light me-5 fs-3" style="font-family: cursive;">{{currentUser?.username}}</span>
+          <button mat-mini-fab color="warn" aria-label="Example icon button with a home icon" (click)="logout()">
+            <mat-icon>logout</mat-icon>
+          </button>
         </div>
-    </div>
-</nav>
-        <mat-drawer-container class="example-container" autosize>
-            <mat-drawer #drawer class="example-sidenav" mode="side">
-                <div class="col mt-3 p-5">
-                    <h1>zzzzzz</h1>
-                    <span>aaaaa</span>
-                    <span>bbbbbbbbbbbbdsqfsegfevzeb</span>
-                </div>
-            </mat-drawer>
-            <div class="example-sidenav-content pt-5">
-                <div class="m-3">
-                    <router-outlet></router-outlet>
-                </div>
-            </div>
-        </mat-drawer-container>
-
-<!-- <div class="row h-100 m-0 pt-5">
-    <div class="col-auto ms-0">
-        <mat-drawer-container class="ms-0 h-100" autosize>
-            <mat-drawer #drawer class="example-sidenav" mode="side">
-                <div class="col mt-3 p-5">
-                    <h1>zzzzzz</h1>
-                    <span>aaaaa</span>
-                    <span>bbbbbbbbbbbbdsqfsegfevzeb</span>
-                </div>
-            </mat-drawer>
-
-        </mat-drawer-container>
-    </div>
-    <div class="col mt-5">
+      </div>
+    </nav>
+    <!-- CONTENT -->
+    <div class=" p-5 globalBgColor" >
         <router-outlet></router-outlet>
     </div>
-</div> -->
+  </div>
+</mat-drawer-container>

@@ -11,6 +11,7 @@ import { map, filter } from 'rxjs/operators';
 
 import { AvailableDatesDto } from '../models/available-dates-dto';
 import { ConsultationDto } from '../models/consultation-dto';
+import { EUserType } from '../models/e-user-type';
 import { NewConsultationDto } from '../models/new-consultation-dto';
 
 @Injectable({
@@ -36,6 +37,8 @@ export class ConsultationService extends BaseService {
    * This method doesn't expect any request body.
    */
   apiConsultationGet$Plain$Response(params?: {
+    UserId?: string;
+    UserType?: EUserType;
     HealthCheckProviderId?: string;
     PatientId?: string;
     StartDateBefore?: string;
@@ -50,6 +53,8 @@ export class ConsultationService extends BaseService {
 
     const rb = new RequestBuilder(this.rootUrl, ConsultationService.ApiConsultationGetPath, 'get');
     if (params) {
+      rb.query('UserId', params.UserId, {});
+      rb.query('UserType', params.UserType, {});
       rb.query('HealthCheckProviderId', params.HealthCheckProviderId, {});
       rb.query('PatientId', params.PatientId, {});
       rb.query('StartDateBefore', params.StartDateBefore, {});
@@ -79,6 +84,8 @@ export class ConsultationService extends BaseService {
    * This method doesn't expect any request body.
    */
   apiConsultationGet$Plain(params?: {
+    UserId?: string;
+    UserType?: EUserType;
     HealthCheckProviderId?: string;
     PatientId?: string;
     StartDateBefore?: string;
@@ -103,6 +110,8 @@ export class ConsultationService extends BaseService {
    * This method doesn't expect any request body.
    */
   apiConsultationGet$Json$Response(params?: {
+    UserId?: string;
+    UserType?: EUserType;
     HealthCheckProviderId?: string;
     PatientId?: string;
     StartDateBefore?: string;
@@ -117,6 +126,8 @@ export class ConsultationService extends BaseService {
 
     const rb = new RequestBuilder(this.rootUrl, ConsultationService.ApiConsultationGetPath, 'get');
     if (params) {
+      rb.query('UserId', params.UserId, {});
+      rb.query('UserType', params.UserType, {});
       rb.query('HealthCheckProviderId', params.HealthCheckProviderId, {});
       rb.query('PatientId', params.PatientId, {});
       rb.query('StartDateBefore', params.StartDateBefore, {});
@@ -146,6 +157,8 @@ export class ConsultationService extends BaseService {
    * This method doesn't expect any request body.
    */
   apiConsultationGet$Json(params?: {
+    UserId?: string;
+    UserType?: EUserType;
     HealthCheckProviderId?: string;
     PatientId?: string;
     StartDateBefore?: string;
