@@ -6,6 +6,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import {ScrollingModule} from '@angular/cdk/scrolling'; 
 import {MatDividerModule} from '@angular/material/divider'; 
+import {MatTableModule} from '@angular/material/table'; 
+import {MatPaginatorModule} from '@angular/material/paginator'; 
 
 // DevExtreme
 import { DxSelectBoxModule, DxTreeViewModule, DxScrollViewModule, DxSchedulerModule } from 'devextreme-angular';
@@ -60,6 +62,8 @@ import { PatientEditConsultationComponent } from './components/patient/consultat
     MatButtonModule,
     MatCardModule,
     MatIconModule,
+    MatTableModule,
+    MatPaginatorModule,
     ScrollingModule,
     MatSidenavModule,
     DxSelectBoxModule,

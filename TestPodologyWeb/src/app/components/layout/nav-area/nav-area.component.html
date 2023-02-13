@@ -12,9 +12,9 @@
                         <div [ngClass]="item?.routerLink == selectedMenu && item.items.length == 0 ? 'text-danger' : ''" class="menu-item d-flex align-items-center w-100 rounded-4"
                             (click)="changeSelection(item)">
                             <div class="icon ps-2">
-                                <i class="fa-lg" [ngClass]="item.icon"></i>
+                                <i class="fs-4" [ngClass]="item.icon"></i>
                             </div>
-                            <div class="menu-name p-3">
+                            <div class="menu-name p-3 fs-5">
                                 <span>{{ item.title }}</span>
                             </div>
                             <div class="ms-auto me-2">
@@ -32,9 +32,9 @@
                                 <div [ngClass]="subItem?.routerLink == selectedMenu ? 'text-danger' : ''">
                                     <div class="menu-item d-flex align-items-center w-100">
                                         <div class="icon-light ms-4">
-                                            <i class="fa-md" [ngClass]="subItem.icon + ''"></i>
+                                            <i class="fa-md fs-4" [ngClass]="subItem.icon + ''"></i>
                                         </div>
-                                        <div class="menu-name-light p-2">
+                                        <div class="menu-name-light p-2 fs-5">
                                             <span>{{ subItem.title }}</span>
                                         </div>
                                         <!-- <div class="caret ms-auto">

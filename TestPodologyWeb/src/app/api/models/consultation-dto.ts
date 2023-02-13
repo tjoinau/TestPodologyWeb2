@@ -1,8 +1,10 @@
 /* tslint:disable */
 /* eslint-disable */
+import { HealthCareProviderDto } from './health-care-provider-dto';
 import { PatientDto } from './patient-dto';
 export interface ConsultationDto {
   endConsultation?: string;
+  healthCareProvider?: HealthCareProviderDto;
   healthCareProviderId?: null | string;
   id?: number;
   locationId?: number;
