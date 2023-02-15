@@ -19,7 +19,7 @@ export class PatientConsultationsComponent implements OnInit, AfterViewInit  {
   dataSource = new MatTableDataSource<ConsultationDto>();
   
   ngAfterViewInit(): void {
-    
+    this.dataSource.paginator = this.paginator as MatTableDataSourcePaginator;
   }
   connectedUser: User | undefined;
   subs: Subscription[] = [];
@@ -30,8 +30,6 @@ export class PatientConsultationsComponent implements OnInit, AfterViewInit  {
     this.subs.push(this.consultationService.apiConsultationGet$Json({PatientId: this.connectedUser?.id, UserType: EUserType.Patient}).subscribe({
       next: (data) => {
         this.dataSource = new MatTableDataSource<ConsultationDto>(data);
-
-        this.dataSource.paginator = this.paginator as MatTableDataSourcePaginator;
       },
       error: (error) => {
         console.warn(error);

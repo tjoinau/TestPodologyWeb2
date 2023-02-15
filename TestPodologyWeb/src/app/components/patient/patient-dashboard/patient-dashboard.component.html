@@ -1,3 +1,29 @@
-<app-custom-card title="Calendar" subtitle="Your calendar is there">
-    
+<app-custom-card title="Dashboard" subtitle="Your dashboard is there">
+    <mat-card class="example-card mt-3" *ngFor="let consultation of consultationDtos">
+        <mat-card-header>
+            <mat-card-title>Apointment with Dr {{consultation.healthCareProvider?.lastName}}</mat-card-title>
+          <mat-card-subtitle>{{consultation.startConsultation | date: 'dd/MM/yyyy - HH:mm'}} in {{consultation.location?.name}} </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-11">
+              <p>This card has divider and indeterminate progress as footer</p>
+              <p>{{ consultation.id }}</p>
+            </div>
+            <div class="col-1 h-100 ">
+              <img class="rounded-circle" src="./././assets\images\logos\user-doctor.png" width="100%">
+            </div>
+          </div>
+         
+          <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Update</button>
+          <button mat-button color="warn">Delete</button>
+        </mat-card-actions>
+        <mat-card-footer>
+          <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+        </mat-card-footer>
+      </mat-card>
+      
 </app-custom-card>

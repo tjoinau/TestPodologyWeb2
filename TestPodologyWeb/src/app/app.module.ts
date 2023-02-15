@@ -8,6 +8,12 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatTableModule} from '@angular/material/table'; 
 import {MatPaginatorModule} from '@angular/material/paginator'; 
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatStepperModule} from '@angular/material/stepper'; 
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
+
 
 // DevExtreme
 import { DxSelectBoxModule, DxTreeViewModule, DxScrollViewModule, DxSchedulerModule } from 'devextreme-angular';
@@ -18,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';import { NgModule } from
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Components
 import { HcpMainComponent } from './components/healthCheckProvider/hcp-main/hcp-main.component';
@@ -53,17 +60,25 @@ import { PatientEditConsultationComponent } from './components/patient/consultat
   ],
   imports: [
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     ApiModule.forRoot({ rootUrl: 'https://localhost:7252' }),
     //ApiModule.forRoot({ rootUrl: 'https://testpodologyapi.azurewebsites.net' }),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
+    MatInputModule,
     MatButtonModule,
     MatCardModule,
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    MatExpansionModule,
+    MatDividerModule,
+    MatSnackBarModule,
+    MatStepperModule,
+    MatSelectModule,
     ScrollingModule,
     MatSidenavModule,
     DxSelectBoxModule,
